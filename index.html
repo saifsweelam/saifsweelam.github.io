@@ -19,13 +19,35 @@
                 "An enthusiastic developer who aims to make something which will be refered at in the near future"
             </p>
         </div>
-        <img src="images/menu.png" alt="View Menu" class="button">
+        <img src="images/menu.png" alt="View Menu" class="button" onclick="myFunction()">
         <div class="bar">
-            <a href="https://github.com/saifsweelam" class="bar_item">Repositories</a>
-            <a href="https://www.youtube.com/channel/UCbic2g2KHDiKFdCIWso7AaA" class="bar_item">Logic Crackers</a>
-            <a href="https://logicrackers.blogspot.com/" class="bar_item">Blog</a>
+            <a href="https://github.com/saifsweelam" class="bar_item" target="_blank">Repositories</a>
+            <a href="https://www.youtube.com/channel/UCbic2g2KHDiKFdCIWso7AaA" class="bar_item" target="_blank">Logic
+                Crackers</a>
+            <a href="https://logicrackers.blogspot.com/" class="bar_item" target="_blank">Blog</a>
         </div>
     </div>
     <div class="contents">
     </div>
 </body>
+<script>
+    function myFunction() {
+        document.querySelector('.bar').classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.bar')) {
+            var dropdowns = document.getElementsByClassName("bar");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+
+</html>
