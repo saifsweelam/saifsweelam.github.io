@@ -1,17 +1,55 @@
-* {
-  margin:0px;
-  padding:0px;
+body {
+  font-family: Bebas Nueu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: oldlace;
 }
 
-#octocat {
-  display: block;
-  width:384px;
-  margin: 50px auto;
+.banner {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: orangered;
+}
+
+.button {
+  height: 30%;
+  width: 5%;
+}
+
+h1 {
+  font-family: Bangers, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 p {
-  display: block;
-  width: 400px;
-  margin: 50px auto;
-  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  font-family: Acme, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.title {
+  margin: 2em;
+}
+
+@media screen and (min-width:450px) {
+  .button {
+    display: none;
+  }
+
+  .bar {
+    width: 100%;
+  }
+
+  .title {
+    width: 100%;
+    display: flex;
+  }
+
+  h1 {
+    font-size: 3em;
+    width: 30%;
+  }
+  
+  p {
+    margin-top: auto;
+    width: 70%;
+    float: right;
+  }
 }
