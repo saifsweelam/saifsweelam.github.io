@@ -32,12 +32,13 @@
 </body>
 <script>
     function myFunction() {
-        document.querySelector('.bar').classList.toggle("show");
+        var bar = document.querySelector('.bar')
+        bar.classList.toggle("show");
     }
 
     // Close the dropdown menu if the user clicks outside of it
     window.onclick = function (event) {
-        if (!event.target.matches('.bar')) {
+        if (!event.target.matches('.button')) {
             var dropdowns = document.getElementsByClassName("bar");
             var i;
             for (i = 0; i < dropdowns.length; i++) {

@@ -103,7 +103,6 @@ a:active {
 
   .button {
     width: 10%;
-    padding: 16px;
     border: none;
     cursor: pointer;
   }
@@ -111,15 +110,17 @@ a:active {
   .bar {
     display: none;
     position: absolute;
+    left: 200px;
     background-color: #f1f1f1;
     min-width: 160px;
+    float: right;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
 
   /* Dropdown button on hover & focus */
   .button:hover, .button:focus {
-    background-color: #2980B9;
+    background-color: rgb(255, 255, 255);
   }
 
   /* Links inside the dropdown */
