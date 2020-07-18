@@ -30,7 +30,6 @@ body {
 
         .navbar-brand {
             display: none;
-            // color: #fff;
         }
 
         @media screen and (min-width: 991.98px) {
@@ -58,13 +57,16 @@ body {
 
 
         @media (max-width: 991.98px) {
-            background: #555;
+            &.active {
+                background: #555;
+    
+    
+                .nav-link {
+                    color: #fff;
+                }
 
-            .navbar-brand,
-            .nav-link {
-                display: block;
-                color: #fff;
             }
+            .show, .collapsing { background-color: #555; }
         }
     }
 
@@ -83,15 +85,24 @@ body {
     }
 
     #skills {
-        min-height: 100vh;
-        
-        button { display: none; }
+
+        button {
+            display: none;
+        }
+
         .collapsed {
             @media screen and (max-width: 991.98px) {
-                .card-container { display: none; }
-                .card-container:nth-child(-n+4) { display: flex; }
+                .card-container {
+                    display: none;
+                }
 
-                & + button { display: inline; }
+                .card-container:nth-child(-n+4) {
+                    display: flex;
+                }
+
+                &+button {
+                    display: inline;
+                }
             }
         }
 
@@ -142,7 +153,8 @@ body {
                 color: #FFD43B;
             }
 
-            .fa-node, .fa-node-js {
+            .fa-node,
+            .fa-node-js {
                 color: #3C873A;
             }
 
@@ -156,6 +168,58 @@ body {
 
             .fa-chart-bar {
                 color: #a921f5;
+            }
+        }
+    }
+
+    #projects {
+        background-color: rgba(255, 255, 255, 0.8);
+
+        @media screen and (max-width: 768px) {
+            .mobile-reverse {
+                flex-direction: column-reverse !important;
+            }
+        }
+
+        .project-img {
+            width: 100%;
+            position: relative;
+            border-radius: 50%;
+            padding-top: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.6s;
+            &:hover { transform: scale(1.04); }
+
+            &#misk-img {
+                background-image: url(../images/projects/misk.png);
+            }
+
+            &#identity-img {
+                background-image: url(../images/projects/get-your-identity.png);
+            }
+            
+            &#protected-img {
+                background-image: url(../images/projects/protected-img.png);
+            }
+
+            &#calc-img {
+                background-image: url(../images/projects/expression-calc.png);
+            }
+        }
+
+        h3 {
+            width: 100%;
+            border-bottom: 3px solid;
+            border-image-slice: 1;
+
+            &.right {
+                border-image-source: linear-gradient(to right, #f1a344, #00000000);
+            }
+            
+            &.left {
+                border-image-source: linear-gradient(to left, #f1a344, #00000000);
             }
         }
     }
