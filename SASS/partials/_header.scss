@@ -1,0 +1,15 @@
+body {
+    #page-header {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .html-tags {
+            font-size: 3rem;
+            font-weight: 600;
+            -webkit-text-stroke: 0.1px white;
+            -webkit-text-fill-color: black;
+        }
+    }
+}

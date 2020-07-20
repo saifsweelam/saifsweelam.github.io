@@ -1,0 +1,89 @@
+body {
+    #skills {
+
+        button {
+            display: none;
+        }
+
+        .collapsed {
+            @media screen and (max-width: 991.98px) {
+                .card-container {
+                    display: none;
+                }
+
+                .card-container:nth-child(-n+4) {
+                    display: flex;
+                }
+
+                &+button {
+                    display: inline;
+                }
+            }
+        }
+
+        .skill-card {
+            transition: all 0.7s;
+            border-radius: 20px;
+            background-color: #fff0c9fb;
+            -webkit-box-shadow: 10px 10px 30px -19px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 10px 10px 30px -19px rgba(0, 0, 0, 0.75);
+            box-shadow: 10px 10px 30px -19px rgba(0, 0, 0, 0.75);
+
+
+            &:hover {
+                -webkit-box-shadow: 10px 12px 35px -2px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow: 10px 12px 35px -2px rgba(0, 0, 0, 0.75);
+                box-shadow: 10px 12px 35px -2px rgba(0, 0, 0, 0.75);
+            }
+
+            h4 {
+                font-weight: bold;
+            }
+
+            .fa-html5 {
+                color: #f06529;
+            }
+
+            .fa-css3-alt {
+                color: #264de4
+            }
+
+            .fa-bootstrap {
+                color: #563d7c;
+            }
+
+            .fa-sass {
+                color: #CD6799;
+            }
+
+            .fa-js-square {
+                color: #f0db4f;
+            }
+
+            .fa-palette {
+                color: #a23bf7;
+            }
+
+            .fa-python {
+                color: #FFD43B;
+            }
+
+            .fa-node,
+            .fa-node-js {
+                color: #3C873A;
+            }
+
+            .fa-file-alt {
+                color: #5094ff;
+            }
+
+            .fa-envira {
+                color: #3FA037;
+            }
+
+            .fa-chart-bar {
+                color: #a921f5;
+            }
+        }
+    }
+}

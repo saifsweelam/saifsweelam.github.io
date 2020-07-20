@@ -2,22 +2,30 @@
 <html lang="en">
 
 <head>
+
     <!--meta-->
     <meta charset="UTF-8">
-    <meta name="description"
-        content="A web developer experienced in Front-End and Back-End Web Developement. Hire Me NOW!!">
+    <meta name="description" content="A web developer experienced in Front-End and Back-End Web Developement. Hire Me NOW!!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#555555">
-    <title>Page Not Found</title>
+    <title>Seif El-Din Sweilam</title>
+
     <!--Google Font "Cairo"-->
     <link rel="stylesheet" href="CSS/cairo.css">
+
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/586ec15b1c.js" crossorigin="anonymous"></script>
+
     <!--jQuery 3.5-->
     <script src="JS/jquery.min.js"></script>
+
     <!--Bootstrap 4-->
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
     <script src="JS/bootstrap.min.js"></script>
+
     <!--Custom CSS-->
     <link rel="stylesheet" href="CSS/styles.css">
+
     <!--favicon-->
     <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
     <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
@@ -25,6 +33,7 @@
     <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="manifest" href="images/favicon/manifest.json">
+
 </head>
 
 <body>
@@ -35,9 +44,9 @@
 
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto text-center">
-                    <li class="nav-item w-100 active"><a href="index.html" class="nav-link text-uppercase font-weight-bold">Home<span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item w-100"><a href="index.html" class="nav-link text-uppercase font-weight-bold">Home</a></li>
                     <li class="nav-item w-100"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
-                    <li class="nav-item w-100"><a href="certificates.html" class="nav-link text-uppercase font-weight-bold">Certificates</a></li>
+                    <li class="nav-item w-100 active"><a href="certificates.html" class="nav-link text-uppercase font-weight-bold">Certificates<span class="sr-only">(current)</span></a></li>
                     <li class="nav-item w-100"><a href="portfolio.html" class="nav-link text-uppercase font-weight-bold">Portfolio</a></li>
                     <li class="nav-item w-100"><a href="mailto:saifsweelam@gmail.com" class="nav-link text-uppercase font-weight-bold">Contact</a></li>
                 </ul>
@@ -45,20 +54,20 @@
         </div>
     </nav>
 
+    <section id="certificate-slider" class="carousel slide carousel-multi-item text-center mt-5 p-5 text-white" data-ride="carousel">
 
-    <header id="page-header" class="text-white text-center pt-5">
-        <div class="container">
-            <p class="text-left html-tags">&lt;error&gt;</p>
-            <h1 class="display-1">404 Not Found</h1>
-            <p class="text-right html-tags">&lt;&#47;error&gt;</p>
-            <p class="mt-5 h3">The page you requested couldn't be found.</p>
-            <a href="index.html" class="btn btn-secondary">Return Home</a>
-        </div>
-    </header>
+        <ol class="carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox"></div>
+
+    </section>
+
+    <section id="certificates" class="row justify-content-center align-items-center p-5 w-100 ml-auto mr-auto"></section>
 
     <div id="footage"></div>
     <!--Custom scripts-->
     <script src="JS/navbar.js"></script>
+    <script src="JS/certificates.js"></script>
 </body>
 
 </html>

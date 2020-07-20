@@ -1,0 +1,53 @@
+body {
+    #projects {
+        background-color: rgba(255, 255, 255, 0.8);
+
+        @media screen and (max-width: 576px) {
+            .mobile-reverse {
+                flex-direction: column-reverse !important;
+            }
+        }
+
+        .project-img {
+            width: 100%;
+            position: relative;
+            border-radius: 50%;
+            padding-top: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.6s;
+            &:hover { transform: scale(1.04); }
+
+            &#misk-img {
+                background-image: url(../images/projects/misk.png);
+            }
+
+            &#identity-img {
+                background-image: url(../images/projects/get-your-identity.png);
+            }
+            
+            &#protected-img {
+                background-image: url(../images/projects/protected-img.png);
+            }
+
+            &#calc-img {
+                background-image: url(../images/projects/expression-calc.png);
+            }
+        }
+
+        h3 {
+            width: 100%;
+            border-bottom: 3px solid;
+            border-image-slice: 1;
+
+            &.right {
+                border-image-source: linear-gradient(to right, #f1a344, #00000000);
+            }
+            
+            &.left {
+                border-image-source: linear-gradient(to left, #f1a344, #00000000);
+            }
+        }
+    }
+}

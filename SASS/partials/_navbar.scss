@@ -1,0 +1,56 @@
+body {
+    .navbar {
+        transition: all 0.4s;
+
+        .nav-link {
+            color: #fff;
+
+            &:hover,
+            &:focus {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
+        .navbar-brand {
+            display: none;
+        }
+
+        @media screen and (min-width: 991.98px) {
+
+            &.active {
+                background: #fff;
+                box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+
+                .nav-link {
+                    color: #555;
+
+                    &:hover,
+                    &:focus {
+                        color: #555;
+                        text-decoration: none;
+                    }
+                }
+
+                .navbar-brand {
+                    display: block;
+                    color: #555;
+                }
+            }
+        }
+
+
+        @media (max-width: 991.98px) {
+            &.active {
+                background: #555;
+    
+    
+                .nav-link {
+                    color: #fff;
+                }
+
+            }
+            .show, .collapsing { background-color: #555; }
+        }
+    }
+}
