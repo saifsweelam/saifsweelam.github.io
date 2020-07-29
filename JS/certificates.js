@@ -3,6 +3,10 @@ const parseDate = date => {
     return `${months[date.getMonth()]}, ${date.getFullYear()}`
 }
 
+const showCertificate = certificate => {
+    return
+}
+
 const topCertificates = [
     {
         title: 'Full Stack Web Developer Nanodegree',
@@ -128,7 +132,7 @@ if (topCertificatesNode) {
     html = '';
     for (certificate of topCertificates) {
         html += `
-        <div class="col-sm-6 col-xl-4">
+        <div class="col-sm-6 col-xl-4" data-aos="zoom-in-up" data-aos-offset="300">
             <div class="card mb-4 scale-on-hover" onclick="window.location.href='certificate.html?title=${certificate.title}'">
                 <img class="card-img-top" src="${certificate.thumbnail}" alt="${certificate.title}">
                 <div class="card-body">
@@ -183,3 +187,26 @@ if (certificateSlider) {
         </div>`)
     }
 }
+
+// document.body.insertAdjacentHTML('beforeend', `
+//     <!-- Modal -->
+//     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+//         <div class="modal-dialog modal-dialog-centered" role="document">
+//             <div class="modal-content">
+//                 <div class="modal-header">
+//                     <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+//                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+//                         <span aria-hidden="true">&times;</span>
+//                     </button>
+//                 </div>
+//                 <div class="modal-body">
+//                     ...
+//                 </div>
+//                 <div class="modal-footer">
+//                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+//                     <button type="button" class="btn btn-primary">Save changes</button>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// `)
