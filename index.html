@@ -8,7 +8,12 @@
     <meta name="description" content="A web developer experienced in Front-End and Back-End Web Developement. Hire Me NOW!!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#555555">
+    <meta property="og:type" content="website">
     <title>Seif El-Din Sweilam - Full Stack Web Developer</title>
+
+    <!--Thumbnail Image-->
+    <link rel="image_src" href="images/display-picture.jpg">
+    <meta property="og:image" content="images/display-picture.jpg">
 
     <!--Google Font "Cairo"-->
     <link rel="stylesheet" href="CSS/cairo.css">
@@ -65,10 +70,10 @@
         </div>
     </header>
 
-    <section id="skills" class="bg-white text-center p-5">
+    <section id="skills" class="text-center p-5">
         <div class="container">
-            <h2 class="h1 m-5">Skills</h2>
-            <h3 class="mt-2 h2">Front-End</h3>
+            <h2 class="h1 m-5 text-white">Skills</h2>
+            <h3 class="mt-2 h2 text-white">Front-End</h3>
             <div class="row justify-content-center collapsed ml-auto mr-auto" id="frontend-list">
                 <div class="col-xl-4 col-md-6 mt-2 mb-2 card-container" data-aos="fade-down" data-aos-offset="200">
                     <div class="skill-card col-12 row">
@@ -130,7 +135,7 @@
             <button class="btn btn-link" onclick="document.querySelector('#frontend-list').classList.remove('collapsed')">
                 Display All &dArr;
             </button>
-            <h3 class="mt-2 h2">Back-End</h3>
+            <h3 class="mt-2 h2 text-white">Back-End</h3>
             <div class="row justify-content-center collapsed ml-auto mr-auto" id="backend-list">
                 <div class="col-xl-4 col-md-6 mt-2 mb-2 card-container" data-aos="fade-down" data-aos-offset="200">
                     <div class="skill-card col-12 row">
@@ -304,7 +309,7 @@
     <!--AOS-->
     <link rel="stylesheet" href="CSS/aos.css">
     <script src="JS/aos.js"></script>
-    <script>AOS.init();</script>
+    <script>AOS.init({ once: true });</script>
 
 
     <!--Custom scripts-->

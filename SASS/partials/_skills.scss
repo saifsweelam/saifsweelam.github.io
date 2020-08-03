@@ -1,5 +1,6 @@
 body {
     #skills {
+        background-color: #555555aa;
 
         button {
             display: none;
@@ -21,16 +22,22 @@ body {
             }
         }
 
+        // .card-container {
+        //     background-color: #f00;
+        //     background-clip: content-box;
+        // }
+
         .skill-card {
             transition: all 0.7s;
             border-radius: 20px;
-            background-color: #fff0c9fb;
+            background: #ffffffaa;
             -webkit-box-shadow: 10px 10px 30px -19px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 10px 10px 30px -19px rgba(0, 0, 0, 0.75);
             box-shadow: 10px 10px 30px -19px rgba(0, 0, 0, 0.75);
 
 
             &:hover {
+                background: #ffffffdd;
                 -webkit-box-shadow: 10px 12px 35px -2px rgba(0, 0, 0, 0.75);
                 -moz-box-shadow: 10px 12px 35px -2px rgba(0, 0, 0, 0.75);
                 box-shadow: 10px 12px 35px -2px rgba(0, 0, 0, 0.75);
