@@ -4,7 +4,30 @@ const parseDate = date => {
 }
 
 const showCertificate = certificate => {
-    return
+    const nameNode = document.querySelector('#certificate-name');
+    const thumbnailNode = document.querySelector('#certificate-thumb');
+    const detailsNode = document.querySelector('#certificate-details');
+    const linksNode = document.querySelector('#certificate-links');
+
+    nameNode.textContent = certificate.title;
+    thumbnailNode.src = certificate.thumbnail;
+    thumbnailNode.alt = certificate.title;
+
+    detailsNode.innerHTML = `
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="font-weight-bold">ID: </span>${certificate.id}</li>
+            <li class="list-group-item"><span class="font-weight-bold">Provider: </span>${certificate.provider}</li>
+            <li class="list-group-item"><span class="font-weight-bold">Date: </span>${parseDate(new Date(certificate.date))}</li>
+        </ul>
+    `
+
+    linksNode.innerHTML = `
+        <a href="${certificate.link}" download target="_blank" class="btn btn-danger">Download PDF</a>
+        ${certificate.url? `<a href="${certificate.url}" target="_blank" class="btn btn-warning">View at ${certificate.provider}</a>`: ''}
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    `
+
+    $('#certificateModal').modal('show')
 }
 
 const topCertificates = [
@@ -133,12 +156,12 @@ if (topCertificatesNode) {
     for (certificate of topCertificates) {
         html += `
         <div class="col-sm-6 col-xl-4" data-aos="zoom-in-up" data-aos-offset="300">
-            <div class="card mb-4 scale-on-hover" onclick="window.location.href='certificate.html?title=${certificate.title}'">
+            <div class="card mb-4 scale-on-hover" onclick='showCertificate(${JSON.stringify(certificate)});'>
                 <img class="card-img-top" src="${certificate.thumbnail}" alt="${certificate.title}">
                 <div class="card-body">
                     <h5 class="card-title">${certificate.title}</h5>
                     <p class="card-text">This Certificate was issued by ${certificate.provider} in ${parseDate(certificate.date)}.</p>
-                    <a href="certificate.html?title=${certificate.title}" class="btn btn-outline-secondary btn-sm">Details</a>
+                    <p class="btn btn-outline-secondary btn-sm">Details</p>
                 </div>
             </div>
         </div>
@@ -179,7 +202,7 @@ if (certificateSlider) {
                         <div class="card-body">
                             <h5 class="card-title">${allCertificates[i].title}</h5>
                             <p class="card-text">Issued by ${allCertificates[i].provider} in ${parseDate(allCertificates[i].date)}.</p>
-                            <a href="certificate.html?title=${allCertificates[i].title}" class="btn btn-outline-secondary btn-sm">Details</a>
+                            <button onclick='showCertificate(${JSON.stringify(allCertificates[i])})' class="btn btn-outline-secondary btn-sm">Details</button>
                         </div>
                     </div>
                 </div>
@@ -188,25 +211,25 @@ if (certificateSlider) {
     }
 }
 
-// document.body.insertAdjacentHTML('beforeend', `
-//     <!-- Modal -->
-//     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-//         <div class="modal-dialog modal-dialog-centered" role="document">
-//             <div class="modal-content">
-//                 <div class="modal-header">
-//                     <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-//                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-//                         <span aria-hidden="true">&times;</span>
-//                     </button>
-//                 </div>
-//                 <div class="modal-body">
-//                     ...
-//                 </div>
-//                 <div class="modal-footer">
-//                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-//                     <button type="button" class="btn btn-primary">Save changes</button>
-//                 </div>
-//             </div>
-//         </div>
-//     </div>
-// `)
+document.write(`
+<div class="modal fade" id="certificateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="certificate-name">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <img id="certificate-thumb" class="w-100">
+                </div>
+                <div id="certificate-details"></div>
+            </div>
+            <div class="modal-footer" id="certificate-links"></div>
+        </div>
+    </div>
+</div>
+`)
+$('#certificateModal').modal('hide');
