@@ -1,7 +1,7 @@
 # Personal webite
 A static website designed to promote my work as a Full Stack Web Developer.
 
-_URL: [saifweelam.github.io](https://saifweelam.github.io)_
+_URL: [saifweelam.github.io](https://saifsweelam.github.io)_
 
 
 ## Pages
