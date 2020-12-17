@@ -111,6 +111,8 @@ body #skills {
       color: #3FA037; }
     body #skills .skill-card .fa-chart-bar {
       color: #a921f5; }
+    body #skills .skill-card .fa-angular {
+      color: #a6120d; }
 
 body #projects {
   background-color: rgba(255, 255, 255, 0.8); }
