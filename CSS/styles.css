@@ -140,6 +140,8 @@ body #projects {
       background-image: url(../images/projects/expression-calc.png); }
     body #projects .project-img#shohra-img {
       background-image: url(../images/projects/shohra.png); }
+    body #projects .project-img#khabar-img {
+      background-image: url(../images/projects/khabar.png); }
   body #projects h3 {
     width: 100%;
     border-bottom: 3px solid;

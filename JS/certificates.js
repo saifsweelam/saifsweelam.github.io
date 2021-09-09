@@ -142,6 +142,15 @@ let allCertificates = [
         id: 'GRG2QTP',
         url: 'https://confirm.udacity.com/GRG2QTP',
         date: new Date(2019, 6)
+    },
+    {
+        title: 'Advanced Web Development Nanodegree',
+        provider: 'Udacity',
+        thumbnail: 'certificates/advanced-web-nanodegree/advanced-web-nanodegree-1.jpg',
+        link: 'certificates/advanced-web-nanodegree/advanced-web-nanodegree.pdf',
+        id: 'RCPGJDGL',
+        url: 'https://confirm.udacity.com/RCPGJDGL',
+        date: new Date(2020, 7)
     }
 ]
 
